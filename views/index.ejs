@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+	<% if(QR_code){ %>
+	<img src="<%= QR_code %>">
+	<a href="/download?file_path=<%= img_src %>"> Download</a>
+	<% }else{ %>
+		<form action="/" method="POST">
+				<label for="url">Enter Data  </label>
+				<input type="text" name="url" id="url" class="form-control" required placeholder="Enter  here..">
+				<button type="submit" class="btn btn-primary">Generate</button>
+		</form>
+	<% } %>
+</body>
+</html>
